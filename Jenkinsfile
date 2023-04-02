@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: "KeyPairName", defaultValue: "KeyPair", trim: true, description: "Name of an existing EC2 key pair (for SSH-access to the worker node instances)")
+        string(name: "KeyPairName", defaultValue: "TestKP", trim: true, description: "Name of an existing EC2 key pair (for SSH-access to the worker node instances)")
         string(name: "WorkerNodesInstanceType", defaultValue: "t2.medium", trim: true, description: "EC2 instance type for the worker nodes")
         string(name: "NumWorkerNodes", defaultValue: "2", trim: true, description: "Number of worker nodes to create")
     }
